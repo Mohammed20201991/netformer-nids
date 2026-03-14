@@ -66,25 +66,27 @@ The input data should be formatted as **time-series sequences of network flow fe
 ## Repository Structure
 
 ```
-netformer-network-intrusion-detection
+netformer-network-intrusion-detection/
 │
-├── data/                   # Dataset files or preprocessing scripts
-├── models/                 # NetFormer model architecture
-│   └── netformer.py
+├── data/ # Dataset files or preprocessing scripts
+│ └── preprocess.py
 │
-├── training/               # Training scripts
-│   └── train.py
+├── models/ # NetFormer model architecture
+│ └── netformer.py
 │
-├── evaluation/             # Evaluation scripts
-│   └── evaluate.py
+├── training/ # Training scripts
+│ └── train.py
 │
-├── utils/                  # Utility functions
+├── evaluation/ # Evaluation scripts
+│ └── evaluate.py
 │
-├── notebooks/              # Experimental notebooks
+├── utils/ # Utility functions (scalers, encoders, plotting)
 │
-├── requirements.txt        # Python dependencies
+├── notebooks/ # Experimental notebooks
 │
-└── README.md               # Project documentation
+├── requirements.txt # Python dependencies
+│
+└── README.md # Project documentation
 ```
 
 ---
@@ -178,6 +180,12 @@ Evaluation metrics include:
 
 ---
 
+## Testing New Unseen Data
+
+Test a trained model on new unseen network traffic:
+
+`python evaluation/evaluate.py --unseen data/new_traffic.csv`
+
 ## Interpretability
 
 NetFormer provides interpretability by analyzing **attention weights**.
@@ -239,5 +247,6 @@ For questions or collaboration:
 
 Email: [al_hitawe@uofallujah.edu.iq](mailto:al_hitawe@uofallujah.edu.iq)
 GitHub: https://github.com/Mohammed20201991
-Copyright (c) 2026 Mohammed A.S. Al-Hitawi on behalf on authors
+Copyright (c) 2026 Mohammed A.S. Al-Hitawi 
+on behalf on authors
 
